@@ -60,12 +60,12 @@ public class FreqWordList {
                 String[] sarray = line.split(",");
                 String word = sarray[0];
                 if (word.length() > 0) {
-                    sb.append("localStorage.setItem('");
+                    sb.append("localStorage.setItem(\"");
                     sb.append(sarray[0]);
-                    sb.append("', '");
+                    sb.append("\", \"");
                     int stringTokenizer = new StringTokenizer(" " + line + " ", ";").countTokens() - 1;
                     sb.append(stringTokenizer);
-                    sb.append("');");
+                    sb.append("\");");
                     bw.append(sb.toString());
                     bw.newLine();
                     bw.flush();
